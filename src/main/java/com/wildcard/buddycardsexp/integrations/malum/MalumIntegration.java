@@ -3,7 +3,7 @@ package com.wildcard.buddycardsexp.integrations.malum;
 import com.sammy.malum.common.item.spirit.MalumSpiritItem;
 import com.sammy.malum.core.setup.content.SpiritRiteRegistry;
 import com.sammy.malum.core.setup.content.SpiritTypeRegistry;
-import com.sammy.malum.core.setup.content.item.tabs.MalumSpiritTab;
+import com.sammy.malum.core.setup.content.item.tabs.MalumCreativeTab;
 import com.sammy.malum.core.systems.rites.MalumRiteType;
 import com.sammy.malum.core.systems.spirit.MalumSpiritType;
 import com.sammy.malum.core.systems.spirit.SpiritTypeProperty;
@@ -50,7 +50,7 @@ public class MalumIntegration {
         RegistryHandler.ITEMS.register("runewood_card_display", () -> new BlockItem(RUNEWOOD_DISPLAY.get(), DEFAULT_PROPERTIES));
         RegistryHandler.ITEMS.register("soulwood_card_display", () -> new BlockItem(SOULWOOD_DISPLAY.get(), DEFAULT_PROPERTIES));
 
-        SPIRIT_ITEM = RegistryHandler.ITEMS.register("childish_spirit", () -> new MalumSpiritItem(new Item.Properties().tab(MalumSpiritTab.INSTANCE), SPIRIT));
+        SPIRIT_ITEM = RegistryHandler.ITEMS.register("childish_spirit", () -> new MalumSpiritItem(new Item.Properties().tab(MalumCreativeTab.INSTANCE), SPIRIT));
         SPIRIT = SpiritTypeRegistry.create("childish", SPIRIT_COLOR, SPIRIT_ITEM, 2);
         SpiritTypeRegistry.SPIRIT_TYPE_PROPERTY = new SpiritTypeProperty("spirit_type", SpiritTypeRegistry.SPIRITS.values());
 
